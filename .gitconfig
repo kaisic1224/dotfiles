@@ -1,0 +1,11 @@
+[init]
+	defaultBranch = main
+[user]
+	email = hiddenshadows1224@gmail.com
+	name = kaisic1224
+[credential]
+	helper = 
+	helper = /usr/local/bin/git-credential-manager
+	credentialStore = plaintext
+[credential "https://dev.azure.com"]
+	useHttpPath = true
