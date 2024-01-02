@@ -9,3 +9,5 @@
 	credentialStore = plaintext
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[core]
+	editor = nvim
