@@ -110,6 +110,7 @@ source $ZSH/oh-my-zsh.sh
 
 #old configs
 
+alias buds='bluetoothctl -- connect 08:BF:A0:35:34:C6'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias leet='cd ~/Desktop/leet && nvim'
 alias rmswap='rm ~/.local/state/nvim/swap/*'
