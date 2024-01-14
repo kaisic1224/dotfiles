@@ -73,7 +73,6 @@ ZSH_THEME="robbyrussell"
 plugins=(
         git
         history-substring-search
-        colored-man-pages
         zsh-autosuggestions
         zsh-syntax-highlighting
 )
