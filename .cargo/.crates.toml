@@ -5,3 +5,4 @@
 "irust 1.71.4 (registry+https://github.com/rust-lang/crates.io-index)" = ["irust"]
 "ripgrep 14.0.3 (registry+https://github.com/rust-lang/crates.io-index)" = ["rg"]
 "sccache 0.7.6 (registry+https://github.com/rust-lang/crates.io-index)" = ["sccache"]
+"wasm-pack 0.12.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["wasm-pack"]
