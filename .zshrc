@@ -120,18 +120,18 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias clean-journals='sudo journalctl --vacuum-size=50M --vacuum-time=2weeks'
 alias orphans='pacman -Qtdq | sudo pacman -Rns -'
-alias genpyenv='conda env export > pyenvironment.yml'
+alias genconda='conda env export > pyenvironment.yml'
 # PS1='[\u@\h \W]\$ '
 
 get_conda_env() {
-        local git_status=$(git rev-parse --is-inside-work-tree)
-        if [[ ! $git_status == "true" ]]; then
-                echo "Not found root directory (.git)" 
-                return
-        fi
         if [[ ! -z "$CONDA_DEFAULT_ENV" ]]; then
                 conda deactivate
                 conda deactivate
+                return
+        fi
+        local git_status=$(git rev-parse --is-inside-work-tree)
+        if [[ ! $git_status == "true" ]]; then
+                echo "Not found root directory (.git)" 
                 return
         fi
         local env_file=$(fd -E '*cache' | grep pyenvironment.yml)
@@ -144,6 +144,20 @@ get_conda_env() {
         conda activate $env_name
 }
 alias cvv='get_conda_env'
+
+save_zathura() {
+        echo -n "" > ~/.cache/zathura_store
+        local PROGRAMS=$(ps -ax | grep -E -o '(/usr/bin/zathura ).*' | head -n -1 | cut -c 18-)
+        for LINE in "$PROGRAMS"; do
+                echo "$LINE" >> ~/.cache/zathura_store
+        done
+        }
+open_zathura() {
+        for LINE in $(cat ~/.cache/zathura_store); do
+                echo $LINE
+                /usr/bin/zathura "$LINE"
+        done
+}
 
 # osc7_cwd() {
 #     local strlen=${#PWD}
