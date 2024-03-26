@@ -152,11 +152,11 @@ save_zathura() {
                 echo "$LINE" >> ~/.cache/zathura_store
         done
         }
+        
 open_zathura() {
-        for LINE in $(cat ~/.cache/zathura_store); do
-                echo $LINE
-                /usr/bin/zathura "$LINE"
-        done
+        while IFS= read -r line; do
+                nohup zathura -d '/home/vincent/.local/share/zathura' $line &
+        done < "/home/vincent/.cache/zathura_store"
 }
 
 # osc7_cwd() {
