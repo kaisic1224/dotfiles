@@ -26,7 +26,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment one of the following lines to change the auto-update behavior
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 # zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+ zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -38,7 +38,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -52,7 +52,7 @@ ZSH_THEME="robbyrussell"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+ DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -72,7 +72,6 @@ ZSH_THEME="robbyrussell"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
         git
-        history-substring-search
         zsh-autosuggestions
         zsh-syntax-highlighting
 )
@@ -114,50 +113,50 @@ alias buds='bluetoothctl -- connect 08:BF:A0:35:34:C6'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias leet='cd ~/Desktop/leet && nvim'
 alias rmswap='rm ~/.local/state/nvim/swap/*'
-alias vv='source .venv/bin/activate'
+# alias vv='source .venv/bin/activate'
 alias sudo='sudo '
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 alias clean-journals='sudo journalctl --vacuum-size=50M --vacuum-time=2weeks'
 alias orphans='pacman -Qtdq | sudo pacman -Rns -'
-alias genconda='conda env export > pyenvironment.yml'
+# alias genconda='conda env export > pyenvironment.yml'
 # PS1='[\u@\h \W]\$ '
 
-get_conda_env() {
-        if [[ ! -z "$CONDA_DEFAULT_ENV" ]]; then
-                conda deactivate
-                conda deactivate
-                return
-        fi
-        local git_status=$(git rev-parse --is-inside-work-tree)
-        if [[ ! $git_status == "true" ]]; then
-                echo "Not found root directory (.git)" 
-                return
-        fi
-        local env_file=$(fd -E '*cache' | grep pyenvironment.yml)
-        if [[ ! -r $env_file ]]; then
-                echo "No pyenvironment.yml file found!"
-               return
-        fi
-        local env_name=$(head -1 $env_file | cut -c 7-)
-        source ~/miniconda3/bin/activate
-        conda activate $env_name
-}
-alias cvv='get_conda_env'
+# get_conda_env() {
+#         if [[ ! -z "$CONDA_DEFAULT_ENV" ]]; then
+#                 conda deactivate
+#                 conda deactivate
+#                 return
+#         fi
+#         local git_status=$(git rev-parse --is-inside-work-tree)
+#         if [[ ! $git_status == "true" ]]; then
+#                 echo "Not found root directory (.git)" 
+#                 return
+#         fi
+#         local env_file=$(fd -E '*cache' | grep pyenvironment.yml)
+#         if [[ ! -r $env_file ]]; then
+#                 echo "No pyenvironment.yml file found!"
+#                return
+#         fi
+#         local env_name=$(head -1 $env_file | cut -c 7-)
+#         source ~/miniconda3/bin/activate
+#         conda activate $env_name
+# }
+# alias cvv='get_conda_env'
 
-save_zathura() {
-        echo -n "" > ~/.cache/zathura_store
-        local PROGRAMS=$(ps -ax | grep -E -o '(/usr/bin/zathura ).*' | head -n -1 | cut -c 18-)
-        for LINE in "$PROGRAMS"; do
-                echo "$LINE" >> ~/.cache/zathura_store
-        done
-        }
-        
-open_zathura() {
-        while IFS= read -r line; do
-                nohup zathura -d '/home/vincent/.local/share/zathura' $line &
-        done < "/home/vincent/.cache/zathura_store"
-}
+# save_zathura() {
+#         echo -n "" > ~/.cache/zathura_store
+#         local PROGRAMS=$(ps -ax | grep -E -o '(/usr/bin/zathura ).*' | head -n -1 | cut -c 18-)
+#         for LINE in "$PROGRAMS"; do
+#                 echo "$LINE" >> ~/.cache/zathura_store
+#         done
+#         }
+#         
+# open_zathura() {
+#         while IFS= read -r line; do
+#                 nohup zathura -d '/home/vincent/.local/share/zathura' $line &
+#         done < "/home/vincent/.cache/zathura_store"
+# }
 
 # osc7_cwd() {
 #     local strlen=${#PWD}
