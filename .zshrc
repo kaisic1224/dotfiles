@@ -73,7 +73,7 @@ DISABLE_AUTO_TITLE="true"
 plugins=(
         git
         zsh-autosuggestions
-        zsh-syntax-highlighting
+        # zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -108,11 +108,10 @@ source $ZSH/oh-my-zsh.sh
 #old configs
 
 # alias td='sudo bash /etc/libvirt/hooks/qemu.d/win10/release/end/revert.sh'
-alias z='zellij'
 alias buds='bluetoothctl -- connect 08:BF:A0:35:34:C6'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias leet='cd ~/Desktop/leet && nvim'
-alias rmswap='rm ~/.local/state/nvim/swap/*'
+# alias rmswap='rm ~/.local/state/nvim/swap/*'
 # alias vv='source .venv/bin/activate'
 alias sudo='sudo '
 alias ls='ls --color=auto'
