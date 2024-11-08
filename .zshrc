@@ -52,7 +52,7 @@ DISABLE_AUTO_TITLE="true"
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
- DISABLE_UNTRACKED_FILES_DIRTY="true"
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -110,13 +110,13 @@ source $ZSH/oh-my-zsh.sh
 # alias td='sudo bash /etc/libvirt/hooks/qemu.d/win10/release/end/revert.sh'
 alias buds='bluetoothctl -- connect 08:BF:A0:35:34:C6'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
-alias leet='cd ~/Desktop/leet && nvim'
-# alias rmswap='rm ~/.local/state/nvim/swap/*'
+#alias leet='cd ~/Desktop/leet && nvim'
+#alias rmswap='rm ~/.local/state/nvim/swap/*'
 # alias vv='source .venv/bin/activate'
-alias sudo='sudo '
+# alias sudo='sudo '
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
-alias clean-journals='sudo journalctl --vacuum-size=50M --vacuum-time=2weeks'
+# alias clean-journals='sudo journalctl --vacuum-size=50M --vacuum-time=2weeks'
 alias orphans='pacman -Qtdq | sudo pacman -Rns -'
 # alias genconda='conda env export > pyenvironment.yml'
 # PS1='[\u@\h \W]\$ '
