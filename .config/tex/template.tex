@@ -1,0 +1,132 @@
+\documentclass{article}
+
+% Packages
+\usepackage{amssymb}
+\usepackage[most]{tcolorbox}
+\usepackage[a4paper]{geometry}
+\usepackage{fancyvrb}
+\usepackage{graphicx}
+% Update image folder here
+\graphicspath{ {./images/} }
+
+% Page dims
+% \pagestyle{fancy}
+% \fancyhf{} % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+% remove indent
+\setlength{\parindent}{0pt}
+
+% Text styles and sizes
+
+
+% Colors and box styles
+% blue
+\definecolor{bgblue}{RGB}{216,216,255}
+\definecolor{textblue}{RGB}{0,0,126}
+% green
+\definecolor{bggreen}{RGB}{216,255,216}
+\definecolor{textgreen}{RGB}{0,126,0}
+% yellow
+\definecolor{bgyellow}{RGB}{255,255,165}
+\definecolor{textyellow}{RGB}{126,76,0}
+% turquoise
+\definecolor{bgturquoise}{RGB}{203,229,229}
+\definecolor{textturquoise}{RGB}{85,139,139}
+% red
+% \definecolor{}
+
+\newtcolorbox{theorem}[1][]{
+    breakable,
+    after skip balanced=10pt,
+    title=#1,
+    colback=bgblue,
+    colbacktitle=bgblue,
+    coltitle=textblue,
+    toptitle=2.5pt,
+    bottomtitle=2.5pt,
+    fonttitle=\bfseries,
+    boxrule=0mm,
+    leftrule=3pt,
+    arc=0pt,
+    outer arc=0pt,
+    colframe=textblue
+}
+\newtcolorbox{definition}[1][]{
+    breakable,
+    after skip balanced=10pt,
+    title=#1,
+    colback=bgyellow,
+    colbacktitle=bgyellow,
+    coltitle=textyellow,
+    toptitle=2.5pt,
+    bottomtitle=2.5pt,
+    fonttitle=\bfseries,
+    boxrule=0mm,
+    leftrule=3pt,
+    arc=0pt,
+    outer arc=0pt,
+    colframe=textyellow
+}
+\newtcolorbox{example}[1][]{
+    breakable,
+    after skip balanced=10pt,
+    title=#1,
+    colback=bggreen,
+    colbacktitle=bggreen,
+    coltitle=textgreen,
+    toptitle=2.5pt,
+    bottomtitle=2.5pt,
+    fonttitle=\bfseries,
+    boxrule=0mm,
+    leftrule=3pt,
+    arc=0pt,
+    outer arc=0pt,
+    colframe=textgreen
+}
+\newtcolorbox{remark}{
+    breakable,
+    after skip balanced=10pt,
+    title=REMARKS,
+    colback=bgturquoise,
+    colbacktitle=bgturquoise,
+    coltitle=textturquoise,
+    toptitle=2.5pt,
+    bottomtitle=2.5pt,
+    fonttitle=\bfseries,
+    boxrule=0mm,
+    leftrule=3pt,
+    arc=0pt,
+    outer arc=0pt,
+    colframe=textturquoise
+}
+
+\newenvironment{code}[1][]{%
+    \par
+    \red{\textit{#1}}
+    \VerbatimEnvironment
+     \begin{center}
+     \begin{BVerbatim}
+     }
+    {\end{BVerbatim}\end{center}}
+
+\newcommand{\red}[1]{\textbf{\color{red}{#1}}}
+\newcommand{\blue}[1]{\textbf{\color{blue}{#1}}}
+\newcommand{\ident}{\setlength{\itemindent}{.5in}}
+\newcommand{\iident}{\setlength{\itemindent}{.7in}}
+\newcommand{\udent}{\setlength{\itemindent}{0in}}
+\newcommand{\nl}{\\[0.5cm]}
+\newcommand{\img}[1]{\includegraphics[width=\textwidth]{#1}}
+
+\begin{document}
+
+\end{document}
