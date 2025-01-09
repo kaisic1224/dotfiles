@@ -112,30 +112,31 @@ alias buds='bluetoothctl -- connect 08:BF:A0:35:34:C6'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 #alias leet='cd ~/Desktop/leet && nvim'
 #alias rmswap='rm ~/.local/state/nvim/swap/*'
-# alias vv='source .venv/bin/activate'
+#alias genv='python -m venv .venv'
+alias vv='source .venv/bin/activate'
 # alias sudo='sudo '
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 # alias clean-journals='sudo journalctl --vacuum-size=50M --vacuum-time=2weeks'
 alias orphans='pacman -Qtdq | sudo pacman -Rns -'
 # alias genconda='conda env export > pyenvironment.yml'
-# PS1='[\u@\h \W]\$ '
+export MANPAGER=nvim
 
 # get_conda_env() {
 #         if [[ ! -z "$CONDA_DEFAULT_ENV" ]]; then
-#                 conda deactivate
-#                 conda deactivate
-#                 return
+#             conda deactivate
+#             conda deactivate
+#             return
 #         fi
 #         local git_status=$(git rev-parse --is-inside-work-tree)
 #         if [[ ! $git_status == "true" ]]; then
-#                 echo "Not found root directory (.git)" 
-#                 return
+#             echo "Not found root directory (.git)" 
+#             return
 #         fi
 #         local env_file=$(fd -E '*cache' | grep pyenvironment.yml)
 #         if [[ ! -r $env_file ]]; then
-#                 echo "No pyenvironment.yml file found!"
-#                return
+#             echo "No pyenvironment.yml file found!"
+#             return
 #         fi
 #         local env_name=$(head -1 $env_file | cut -c 7-)
 #         source ~/miniconda3/bin/activate
