@@ -120,7 +120,7 @@ alias grep='grep --color=auto'
 # alias clean-journals='sudo journalctl --vacuum-size=50M --vacuum-time=2weeks'
 alias orphans='pacman -Qtdq | sudo pacman -Rns -'
 # alias genconda='conda env export > pyenvironment.yml'
-export MANPAGER=nvim
+# export MANPAGER=nvim
 
 # get_conda_env() {
 #         if [[ ! -z "$CONDA_DEFAULT_ENV" ]]; then
@@ -173,4 +173,4 @@ export MANPAGER=nvim
 #     printf '\e]7;file://%s%s\e\\' "${HOSTNAME}" "${encoded}"
 # }
 # PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }osc7_cwd
-. "$HOME/.cargo/env"
+#. "$HOME/.cargo/env"
