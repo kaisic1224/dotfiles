@@ -1,8 +1,0 @@
-[v1]
-"bacon 2.14.0 (registry+https://github.com/rust-lang/crates.io-index)" = ["bacon"]
-"cargo-expand 1.0.74 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-expand"]
-"cargo-show-asm 0.2.23 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-asm"]
-"ripgrep 14.0.3 (registry+https://github.com/rust-lang/crates.io-index)" = ["rg"]
-"sccache 0.7.6 (registry+https://github.com/rust-lang/crates.io-index)" = ["sccache"]
-"tauri-cli 1.5.12 (registry+https://github.com/rust-lang/crates.io-index)" = ["cargo-tauri"]
-"wasm-pack 0.12.1 (registry+https://github.com/rust-lang/crates.io-index)" = ["wasm-pack"]
