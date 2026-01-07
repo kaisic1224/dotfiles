@@ -111,17 +111,12 @@ source $ZSH/oh-my-zsh.sh
 alias buds='bluetoothctl -- connect 08:BF:A0:35:34:C6'
 alias phones='bluetoothctl -- connect AC:80:0A:EC:50:DF'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
-#alias leet='cd ~/Desktop/leet && nvim'
-alias rmswap='rm ~/.local/state/nvim/swap/*'
-#alias genv='python -m venv .venv'
-alias vv='source .venv/bin/activate'
 # alias sudo='sudo '
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias gazelle='bazel run //:gazelle'
 # alias clean-journals='sudo journalctl --vacuum-size=50M --vacuum-time=2weeks'
 alias orphans='pacman -Qtdq | sudo pacman -Rns -'
-alias anvm='source /usr/share/nvm/init-nvm.sh'
-# alias genconda='conda env export > pyenvironment.yml'
 # export MANPAGER=nvim
 
 # get_conda_env() {
@@ -144,7 +139,6 @@ alias anvm='source /usr/share/nvm/init-nvm.sh'
 #         source ~/miniconda3/bin/activate
 #         conda activate $env_name
 # }
-# alias cvv='get_conda_env'
 
 # save_zathura() {
 #         echo -n "" > ~/.cache/zathura_store
@@ -176,6 +170,3 @@ alias anvm='source /usr/share/nvm/init-nvm.sh'
 # }
 # PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; }osc7_cwd
 #. "$HOME/.cargo/env"
-#source /usr/share/nvm/init-nvm.sh
-# export PULUMI_CONFIG_PASSPHRASE_FILE=“$HOME/.pulumi/passphrase.txt”
-# export AWS_PROFILE=fanciti-dev
