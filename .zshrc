@@ -86,11 +86,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -108,15 +108,6 @@ source $ZSH/oh-my-zsh.sh
 #old configs
 
 # alias td='sudo bash /etc/libvirt/hooks/qemu.d/win10/release/end/revert.sh'
-alias buds='bluetoothctl -- connect 08:BF:A0:35:34:C6'
-alias phones='bluetoothctl -- connect AC:80:0A:EC:50:DF'
-alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
-# alias sudo='sudo '
-alias ls='ls --color=auto'
-alias grep='grep --color=auto'
-alias gazelle='bazel run //:gazelle'
-# alias clean-journals='sudo journalctl --vacuum-size=50M --vacuum-time=2weeks'
-alias orphans='pacman -Qtdq | sudo pacman -Rns -'
 # export MANPAGER=nvim
 
 # get_conda_env() {
