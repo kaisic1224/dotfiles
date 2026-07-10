@@ -108,6 +108,16 @@ fi
 #old configs
 
 # alias td='sudo bash /etc/libvirt/hooks/qemu.d/win10/release/end/revert.sh'
+alias buds='bluetoothctl -- connect 08:BF:A0:35:34:C6'
+alias cones='bluetoothctl -- connect 58:18:62:73:51:31'
+alias phones='bluetoothctl -- connect AC:80:0A:EC:50:DF'
+alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+# alias sudo='sudo '
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias gazelle='bazel run //:gazelle'
+alias clean-journals='sudo journalctl --vacuum-size=50M --vacuum-time=2weeks'
+alias orphans='pacman -Qtdq | sudo pacman -Rns -'
 # export MANPAGER=nvim
 
 # get_conda_env() {
