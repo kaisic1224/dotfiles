@@ -4,9 +4,9 @@
 	email = hiddenshadows1224@gmail.com
 	name = kaisic1224
 [credential]
-	helper = 
-	helper = /usr/local/bin/git-credential-manager
 	credentialStore = plaintext
+	helper = cache --timeout 21600
+	helper = oauth
 [credential "https://dev.azure.com"]
 	useHttpPath = true
 [core]
@@ -15,3 +15,7 @@
 	rebase = false
 [push]
 	autoSetupRemote = true
+[gcm]
+	credentialHelper = cach
+	guiPrompt = false
+	provider = gcm
